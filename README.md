@@ -18,30 +18,25 @@
 
 ## Project Structure
 
-The source lives in the project zips (not yet extracted into the repo):
-
 ```
-OOPS & DSA FINAL PROJECT.zip   ← final submission (React + TypeScript app)
-OOPS DSA PROJECT.zip           ← earlier snapshot
+project/               # React + TypeScript app (extracted source)
+├── src/
+│   ├── components/    # HomePage, Dashboard, Cart, ProductCard
+│   │   └── Auth/      # LoginPage, SignupPage, ProtectedRoute
+│   ├── contexts/      # AuthContext (session state)
+│   ├── types.ts       # shared domain types (Product, User, ...)
+│   ├── App.tsx        # routing
+│   └── main.tsx       # entry point
+└── supabase/functions/ # edge functions (welcome email)
 ```
 
-Extract and run:
+## Getting Started
 
 ```bash
-unzip "OOPS & DSA FINAL PROJECT.zip"
-cd "OOPS 99/project"
+cd project
+cp .env.example .env    # fill in your Supabase project URL + anon key
 npm install
 npm run dev
-```
-
-```
-src/
-├── components/        # HomePage, Dashboard, Cart, ProductCard
-│   └── Auth/          # LoginPage, SignupPage, ProtectedRoute
-├── contexts/          # AuthContext (session state)
-├── types.ts           # shared domain types (Product, User, ...)
-├── App.tsx            # routing
-└── main.tsx           # entry point
 ```
 
 ## Course Context
